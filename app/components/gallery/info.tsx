@@ -32,6 +32,10 @@ const Info: React.FC<Props> = ({data}) => {
                 <h3 className='font-semibold text-black text-lg'> Subcategoria:</h3>
                 <div className=' text-lg'> {data?.subcategory?.name}</div>
             </div>
+            <div className='flex items-center gap-x-4'>
+                <h3 className='font-semibold text-black text-lg'> Descripcion:</h3>
+                <div className=' text-lg'> {data?.description}</div>
+            </div>
 
             <div className='mt-10 flex items-center gap-x-3'>
                 <Button className=' flex items-center gap-x-2'>

@@ -15,9 +15,11 @@ interface ProductCardProps{
 const ProductCard: React.FC<ProductCardProps> = ({data}) => {
     const router = useRouter()
     const params = useParams();
+    
+    console.log(params.storesID)
     const handleClick = () =>{
 
-        router.push(`/product/${data?.id}`)
+        router.push(`${params.storesID}/product/${data?.id}`)
 
     }
     

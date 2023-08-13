@@ -31,6 +31,7 @@ export interface Products{
     subcategory: Subcategory
     isFeatured: boolean
     isArchived: boolean
+    description: string
     images: Image[]
 }
 export interface Subcategory{

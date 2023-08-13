@@ -8,10 +8,10 @@ const URL = `${process.env.NEXT_PUBLIC_API_URL}`
 
 
 
-const getProductsUnit = async (storeId: string,  id:string) : Promise<Products | any> =>{
+const getProductsUnit = async (storeId: string,  productId:string) : Promise<Products | any> =>{
 
 
-     const res = await fetch(`${URL}/${storeId}/product/${id}`)
+     const res = await fetch(`${URL}/${storeId}/product/${productId}`)
     return res.json()
 }
 

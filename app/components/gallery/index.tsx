@@ -11,7 +11,7 @@ interface GalleryProps {
 }
 
 const Gallery: React.FC<GalleryProps> = ({images}) => {
-    console.log('desde imagesx',images)
+   
   return (
     <Tab.Group as="div" className=" flex flex-col-reverse">
         <div className="mx-auto mt-6 hidden w-full max-w-2xl sm:block lg:max-w-none">
@@ -33,6 +33,7 @@ const Gallery: React.FC<GalleryProps> = ({images}) => {
                             fill
                             src={image.url}
                             alt={`imagen del producto`}
+                            className="object-cover object-center"
                             />
                         </div>
 

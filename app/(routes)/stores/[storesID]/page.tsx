@@ -52,13 +52,11 @@ const StorePage: React.FC<StorePageProps> = async ({
                   valueKey="subcategoryID" 
                   name="Subcategorias"
                   data={subcategories}
-                  
                   />
                 <Filter 
                   valueKey="subcategoryID" 
                   name="Categorias"
                   data={categories}
-                  
                   />
               </div>
             </div>
