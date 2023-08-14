@@ -9,17 +9,23 @@ import { useParams, useRouter } from "next/navigation"
 
 
 interface ProductCardProps{
-    data: Products
+    data: Products | any
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({data}) => {
-    const router = useRouter()
+    const router = useRouter();
     const params = useParams();
-    
-    console.log(params.storesID)
-    const handleClick = () =>{
+    // console.log(data)
+    console.log(params)
 
-        router.push(`${params.storesID}/product/${data?.id}`)
+    const handleClick = () =>{
+      
+             router.push(`/stores/${data.storeId}/product/${data?.id}`)  
+
+        // console.log(params)
+        // router.push(`${params.storeId}/product/${data?.id}`)
+
+        
 
     }
     
@@ -30,7 +36,7 @@ const ProductCard: React.FC<ProductCardProps> = ({data}) => {
      
                 <Image 
                 className=" aspect-square object-cover rounded-md"
-                src={`${data.images?.[0]?.url}`} 
+                src={`${data.images?.[0]?.url}` } 
                 alt="Imagen de producto" 
                 fill 
                 />
@@ -53,13 +59,13 @@ const ProductCard: React.FC<ProductCardProps> = ({data}) => {
             <p className="font-semibold text-lg">
                 {data.name}
             </p>
-            <p className="text-gray-600 text-md">
+            {/* <p className="text-gray-600 text-md">
                 {data.category?.name}
                 
             </p>
             <p className="text-gray-600 text-md">
                 {data.subcategory.name}
-            </p>
+            </p> */}
         </div>
 
         <div className="flex items-center justify-between">
@@ -71,3 +77,14 @@ const ProductCard: React.FC<ProductCardProps> = ({data}) => {
 }
 
 export default ProductCard
+
+
+/*
+
+http://localhost:3001/1442a0fa-def8-4572-b5bf-0908962b91ed/product/cc8ef63c-14a2-4c29-9fde-9657f8deaf33
+
+http://localhost:3001/stores/1442a0fa-def8-4572-b5bf-0908962b91ed/product/cc8ef63c-14a2-4c29-9fde-9657f8deaf33 
+http://localhost:3001/store/1442a0fa-def8-4572-b5bf-0908962b91ed/product/cc8ef63c-14a2-4c29-9fde-9657f8deaf33
+
+
+*/

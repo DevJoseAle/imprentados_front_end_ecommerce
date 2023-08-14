@@ -21,4 +21,3 @@ const getBillboardByStoreId = async (storeId:string) : Promise<Billboard> =>{
 
 export default getBillboardByStoreId
 
-//http://localhost:3000/api/48ba5244-8585-42fd-a669-fb2ea195c400/billboard

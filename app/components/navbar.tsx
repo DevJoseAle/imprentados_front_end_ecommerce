@@ -9,7 +9,7 @@ import NavbarActions from './navbar-actions'
 const Navbar = async() => {
 
 
-  const stores = await getStores()
+  let stores = await getStores()
 
   return (
     <div className='border-b'>
