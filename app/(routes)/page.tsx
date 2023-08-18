@@ -1,12 +1,9 @@
 
-import getBillboard from "@/actions/get-billboard";
+
 import Container from "../components/ui/container"
-import getProducts from "@/actions/get-products";
+
 import ProductList from "../components/ui/product-list";
 import getProductsHome from "@/actions/get-products-home";
-import getBillboardByStoreId from "@/actions/get-billboard-by-store";
-import getStores from '@/actions/get-stores';
-import { Billboard as BillboardType, Stores } from "@/types";
 
 import BillboardHome from "../components/ui/billboardHome";
 
@@ -61,8 +58,8 @@ const HomePage = async () => {
       {
         featured.map((feat: any)=>( 
           <>
-          <BillboardHome data={feat}/> 
-           <ProductList title={feat.name} items={feat.products} />  
+            <BillboardHome data={feat}/> 
+            <ProductList title={feat.name} items={feat.products} />  
           </>
       ))
       }
