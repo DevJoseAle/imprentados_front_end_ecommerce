@@ -10,6 +10,7 @@ import { Billboard as BillboardType, Stores } from "@/types";
 
 import BillboardHome from "../components/ui/billboardHome";
 
+export const revalidate = 60;
 interface HomePageFeatured {
   id:         string;
   name:       string;
