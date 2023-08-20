@@ -7,7 +7,8 @@ import getProductsHome from "@/actions/get-products-home";
 
 import BillboardHome from "../components/ui/billboardHome";
 
-export const revalidate = 60;
+
+
 interface HomePageFeatured {
   id:         string;
   name:       string;
@@ -48,8 +49,9 @@ interface BillboardHome {
 
 
 const HomePage = async () => {
+  
+  let featured: HomePageFeatured[] | any = await getProductsHome()
 
-  let featured: HomePageFeatured[] = await getProductsHome()
 
   return (
     
@@ -57,10 +59,10 @@ const HomePage = async () => {
       <div className="space-y-10 pb-10">
       {
         featured.map((feat: any)=>( 
-          <>
+          <div key={feat.name}>
             <BillboardHome data={feat}/> 
             <ProductList title={feat.name} items={feat.products} />  
-          </>
+          </div>
       ))
       }
         
@@ -72,3 +74,5 @@ const HomePage = async () => {
 
 
 export default  HomePage
+
+

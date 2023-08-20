@@ -5,14 +5,14 @@ const URL = `${process.env.NEXT_PUBLIC_API_URL}/homepage`
 
 
 
-const getProductsHome = async () : Promise<Products[] | any> =>{
+const getProductsHome = async () : Promise<Products[]> =>{
     
 
-    const resp = await fetch(URL)
-    .then(response => response.json())
+    let resp = await fetch(URL, {next:{revalidate: 20}})
+    let resp2 = resp.json()
 
     
-    return resp
+    return resp2
 }
 
 export default getProductsHome

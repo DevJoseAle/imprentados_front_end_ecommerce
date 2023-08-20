@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   description: 'Tienda Online de artículos personalizados',
 }
 
+export const dynamic = 'force-dynamic'
 export default function RootLayout({
   children,
 }: {
@@ -28,3 +29,5 @@ export default function RootLayout({
     </html>
   )
 }
+
+
