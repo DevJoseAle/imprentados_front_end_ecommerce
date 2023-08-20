@@ -54,9 +54,10 @@ const HomePage = async () => {
 
 
   return (
-    
+    <div className=" bg-white">
+
     <Container>
-      <div className="space-y-10 pb-10">
+      <div className="space-y-10 pb-10 bg-white">
       {
         featured.map((feat: any)=>( 
           <div key={feat.name}>
@@ -64,10 +65,11 @@ const HomePage = async () => {
             <ProductList title={feat.name} items={feat.products} />  
           </div>
       ))
-      }
+    }
         
       </div>
     </Container>
+    </div>
   )
 }
 

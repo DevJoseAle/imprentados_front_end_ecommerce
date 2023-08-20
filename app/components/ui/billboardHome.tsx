@@ -21,7 +21,7 @@ const BillboardHome: React.FC<BillboardProps> = ({data}) => {
     
   return (
     
-    <div className="p-4 sm:p-6 lg:p-8 rounded-xl overflow-hidden">
+    <div className="p-4 sm:p-6 lg:p-8 rounded-xl overflow-hidden bg-white">
         <div 
         style={{ backgroundImage: `url(${billboards[0].imageUrl})`}}
         className="rounded-xl relative aspect-square md:aspect-[2.4/1] overflow-hidden bg-cover"

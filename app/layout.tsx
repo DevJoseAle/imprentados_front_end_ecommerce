@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${font.className} bg-slate-50`}>
+      <body className={`${font.className} bg-white`}>
         <ToastProvider />
         <Navbar />
         {children}
