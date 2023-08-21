@@ -2,12 +2,12 @@ import React from "react"
 
 interface ContainerProps{
     children: React.ReactNode
-    background: string
+   
 }
 
-const Container: React.FC<ContainerProps> = ({children, background}) => {
+const Container: React.FC<ContainerProps> = ({children}) => {
   return (
-    <div className={` mx-auto max-w-7xl bg-white ${background} `}>
+    <div className={` mx-auto max-w-7xl bg-white`}>
         {children}
     </div>
   )

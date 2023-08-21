@@ -56,7 +56,7 @@ const HomePage = async () => {
   return (
     <div className=" bg-white">
 
-    <Container background="bg-white">
+    <Container>
       <div className="space-y-10 pb-10 bg-white">
       {
         featured.map((feat: any)=>( 
