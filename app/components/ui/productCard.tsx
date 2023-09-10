@@ -60,13 +60,7 @@ const ProductCard: React.FC<ProductCardProps> = ({data}) => {
             <p className="font-semibold text-lg">
                 {data.name}
             </p>
-            {/* <p className="text-gray-600 text-md">
-                {data.category?.name}
-                
-            </p>
-            <p className="text-gray-600 text-md">
-                {data.subcategory.name}
-            </p> */}
+
         </div>
 
         <div className="flex items-center justify-between">

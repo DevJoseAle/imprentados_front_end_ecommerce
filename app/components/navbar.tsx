@@ -14,7 +14,7 @@ const Navbar = async() => {
   return (
     <div className='border-b'>
         <Container>
-            <div className=' relative px-4 sm:px-6 lg:px-8 h-16 flex items-center'>
+            <div className=' relative px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-center '>
                
                 <MainNav data={stores}/>
                
