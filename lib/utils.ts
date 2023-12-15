@@ -8,4 +8,5 @@ export function cn(...inputs: ClassValue[]) {
 export const priceFormatter = new Intl.NumberFormat("es-CL", {
   style: 'currency',
   currency: 'CLP'
-})
+});
+
